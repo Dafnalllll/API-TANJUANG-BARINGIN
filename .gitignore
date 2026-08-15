@@ -1,4 +1,25 @@
+# Dependencies
+node_modules
 
+# Environment
+.env
+.env.local
+.env.production
+
+# Vercel
+.vercel
+
+# Prisma Generated Files
 /src/generated/prisma
 
-/src/generated/prisma
+# Uploads
+uploads/*
+!uploads/.gitkeep
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
