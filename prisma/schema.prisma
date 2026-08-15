@@ -21,3 +21,40 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model Faq {
+  id        Int      @id @default(autoincrement())
+
+  name      String
+
+  phone     String?
+
+  address   String?
+
+  category  String?
+
+  question  String
+
+  file      String?
+
+  answer    String?
+
+  status    String   @default("PENDING")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Pengaduan {
+  id         Int      @id @default(autoincrement())
+  nama       String
+  nik        String
+  telepon    String
+  alamat     String
+  kategori   String
+  judul      String
+  isi        String
+  lampiran   String?
+  status     String   @default("PENDING")
+  createdAt  DateTime @default(now())
+}

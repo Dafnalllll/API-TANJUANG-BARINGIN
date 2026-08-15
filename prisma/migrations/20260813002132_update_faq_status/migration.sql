@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE `faq` ADD COLUMN `status` VARCHAR(191) NOT NULL DEFAULT 'PENDING',
+    MODIFY `category` VARCHAR(191) NULL,
+    MODIFY `answer` VARCHAR(191) NULL;
