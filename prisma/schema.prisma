@@ -45,16 +45,25 @@ model Faq {
   updatedAt DateTime @updatedAt
 }
 
-model Pengaduan {
-  id         Int      @id @default(autoincrement())
-  nama       String
-  nik        String
-  telepon    String
-  alamat     String
-  kategori   String
-  judul      String
-  isi        String
-  lampiran   String?
-  status     String   @default("PENDING")
-  createdAt  DateTime @default(now())
+model Produk {
+  id          Int       @id @default(autoincrement())
+
+  badge       String?
+
+  title       String
+
+  subtitle    String?
+
+  description String    @db.LongText
+
+  highlights  Json?
+
+  cover       String?
+
+  filePath    String?
+
+  buttonText  String?   @default("Unduh File")
+
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
 }
