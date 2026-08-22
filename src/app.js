@@ -20,8 +20,13 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
 
+// Auth routes
 app.use("/api/auth", authRoutes);
+
+// FAQ routes
 app.use("/api/faq", faqRoutes);
+
+// Produk routes
 app.use("/api/produk", produkRoutes);
 app.get("/", (req, res) => {
   res.status(200).json({
